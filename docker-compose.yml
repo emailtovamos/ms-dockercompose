@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  ms-game-engine:
+    image: ms-game-engine:latest
+    ports:
+     - "60051:60051"
+  ms-highscore:
+    image: ms-highscore:latest
+    ports:
+     - "50051:50051"
+  ms-bff:
+    image: ms-bff:latest
+    entrypoint:
+    - ./binary
+    - --address-ms-highscore=ms-highscore:50051
+    - --address-ms-game-engine=ms-game-engine:60051
+    ports:
+     - "8081:8081"
