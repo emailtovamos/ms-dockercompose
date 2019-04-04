@@ -16,3 +16,7 @@ services:
     - --address-ms-game-engine=ms-game-engine:60051
     ports:
      - "8081:8081"
+  ms-frontend:
+    image: ms-frontend:latest
+    ports:
+     - "8083:80"
