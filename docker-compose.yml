@@ -17,6 +17,6 @@ services:
     ports:
      - "8081:8081"
   ms-frontend:
-    image: ms-frontend:latest
+    image: ms-frontend:v3
     ports:
      - "8083:80"
